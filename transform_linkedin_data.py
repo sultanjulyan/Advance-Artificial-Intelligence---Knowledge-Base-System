@@ -97,12 +97,6 @@ def transform_linkedin_data(input_file, output_file):
         'Publication': ''  # Empty as not available in the dataset
     })
     
-    # Replace all NaN values with empty strings
-    transformed_df = transformed_df.fillna('')
-    
-    # Ensure Publication column is empty string for all rows
-    transformed_df['Publication'] = ''
-    
     print(f"\nTransformed columns: {transformed_df.columns.tolist()}")
     print(f"Sample rows:")
     print(transformed_df.head(3).to_string())
